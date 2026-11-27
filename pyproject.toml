@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ruqum-recognizer"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "joblib>=1.6.0",
+    "scikit-learn>=1.9.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "numpy>=2.4.6",
+    "pandas>=3.1.1",
+    "sentencepiece>=0.2.3",
+    "torch>=2.15.0",
+]
+
+[project.scripts]
+train = "src.train:train"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ruqum"]

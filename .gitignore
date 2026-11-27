@@ -1,0 +1,6 @@
+.venv
+.idea
+.DS_Store
+ruqum/__pycache__
+src/__pycache__/
+
